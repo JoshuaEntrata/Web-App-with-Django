@@ -4,9 +4,8 @@ This is a Customer Relationship Management (CRM) application built with Python D
 
 ## Features
 - Create, read, update, and delete customer records.
-- Record and track customer interactions and notes.
 - User-friendly interface built with Bootstrap.
-- Authentication system for secure access.
+- Login and register system.
 
 ## Getting started
 
