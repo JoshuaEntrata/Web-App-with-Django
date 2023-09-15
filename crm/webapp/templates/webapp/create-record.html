@@ -1,0 +1,52 @@
+{% extends 'webapp/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <body>
+    <div class="container bg-light shadow-md p-5">
+            <h3>Create record</h3>
+            <h6>Add something something</h6>
+            <hr>
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        {{ form.email|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form.phone|as_crispy_field }}
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4">
+                        {{ form.city|as_crispy_field }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form.province|as_crispy_field }}
+                    </div>
+                    <div class="col-md-4">
+                        {{ form.country|as_crispy_field }}
+                    </div>
+                </div>
+                <br>
+                {{ form.address|as_crispy_field }}
+                <br>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-info px-4 py-2">
+                        Create record
+                    </button>
+                </div>
+            
+        </form>
+    </div>
+    </body>
+{% endblock %}

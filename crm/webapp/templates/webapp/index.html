@@ -1,0 +1,13 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+  <div class="container d-flex flex-column justify-content-center align-items-center default-height">
+    <h1 class="display-1">CRUD Project</h1>
+    <h4 class="display-4">Using Python Django</h4>
+    <hr />
+    <a href="{% url 'register' %}" class="btn btn-primary d-flex align-items-center gap-2" type="button">
+      <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      Create your account
+    </a>
+  </div>
+{% endblock %}
